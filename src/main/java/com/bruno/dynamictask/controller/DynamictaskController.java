@@ -9,10 +9,13 @@ public class DynamictaskController {
 
     @GetMapping("/")
     public String getViewName(Model model){
-
         model.addAttribute("welcomeMessage", "Welcome to Dynamic Task");
-
         return "index";
+    }
+
+    @GetMapping("/tasks/creation")
+    public String getCreateTaskView(Model model){
+        return "/tasks/creation";
     }
 
 }
